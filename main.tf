@@ -26,7 +26,7 @@ data "azurerm_traffic_manager_profile" "trm" {
   resource_group_name = data.azurerm_resource_group.rg1.name
 }
 
-resource "azurerm_traffic_manager_azure_endpoint" "endpoint1" {
+resource "azurerm_traffic_manager_endpoint" "endpoint1" {
   name                = "endpoint1"
   resource_group_name = data.azurerm_resource_group.rg1.name
   profile_name        = data.azurerm_traffic_manager_profile.trm.name
